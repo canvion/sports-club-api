@@ -1,0 +1,16 @@
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/SportsClubApplication.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/TestDataLoader.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/controller/ActivityController.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/controller/AthleteController.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/controller/CoachController.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/fixtures/TestFixtures.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/model/Activity.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/model/ActivityType.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/model/Athlete.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/model/Coach.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/repository/ActivityRepository.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/repository/AthleteRepository.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/repository/CoachRepository.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/service/ActivityService.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/service/AthleteService.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/main/java/eu/cifpfbmoll/sportsclub/service/CoachService.java

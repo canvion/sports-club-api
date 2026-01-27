@@ -1,0 +1,16 @@
+eu/cifpfbmoll/sportsclub/fixtures/TestFixtures.class
+eu/cifpfbmoll/sportsclub/repository/CoachRepository.class
+eu/cifpfbmoll/sportsclub/SportsClubApplication.class
+eu/cifpfbmoll/sportsclub/service/AthleteService.class
+eu/cifpfbmoll/sportsclub/model/Coach.class
+eu/cifpfbmoll/sportsclub/model/Athlete.class
+eu/cifpfbmoll/sportsclub/repository/AthleteRepository.class
+eu/cifpfbmoll/sportsclub/controller/ActivityController.class
+eu/cifpfbmoll/sportsclub/repository/ActivityRepository.class
+eu/cifpfbmoll/sportsclub/controller/AthleteController.class
+eu/cifpfbmoll/sportsclub/controller/CoachController.class
+eu/cifpfbmoll/sportsclub/service/CoachService.class
+eu/cifpfbmoll/sportsclub/model/ActivityType.class
+eu/cifpfbmoll/sportsclub/TestDataLoader.class
+eu/cifpfbmoll/sportsclub/service/ActivityService.class
+eu/cifpfbmoll/sportsclub/model/Activity.class
