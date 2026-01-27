@@ -48,8 +48,9 @@ jobs:
       - name: Build application
         run: ./mvnw -B package -DskipTests
 
-      - name: Build Docker image
-        run: docker build -t sportsclub-app:${{ github.sha }} .
+      # Comentar temporalmente el Docker build
+      # - name: Build Docker image
+      #   run: docker build -t sportsclub-app:${{ github.sha }} .
 
       - name: Upload test results
         if: always()

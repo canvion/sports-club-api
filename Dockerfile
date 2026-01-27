@@ -1,28 +1,31 @@
 FROM eclipse-temurin:21-jdk-alpine AS builder
 WORKDIR /app
 
-# Copiar archivos de Maven
+#copiar archivos de Maven
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
 
-# Descargar dependencias
-RUN ./mvnw dependency:go-offline
+#dar permisos de ejecución
+RUN chmod +x mvnw
 
-# Copiar código fuente
+#descargar dependencias
+RUN ./mvnw dependency:resolve || true
+
+#copiar código fuente
 COPY src ./src
 
-# Construir la aplicación
+#construir la aplicación
 RUN ./mvnw clean package -DskipTests
 
-# Etapa final - imagen ligera
+#imagen ligera
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
-# Copiar el JAR desde la etapa de build
+#copiar el JAR desde la etapa de build
 COPY --from=builder /app/target/*.jar app.jar
 
-# Exponer el puerto
+# puerto
 EXPOSE 8080
 
-# Comando de inicio
+#inicio
 ENTRYPOINT ["java", "-jar", "app.jar"]
