@@ -26,9 +26,11 @@ jobs:
           --health-retries 5
     
     steps:
+      # 1. Checkout del código
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # 2. Configurar entorno Java
       - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
@@ -36,22 +38,38 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
+      # 3. Validar formato y correctitud del código (Checkstyle - linting)
       - name: Code style check (Checkstyle)
         run: ./mvnw checkstyle:check
         continue-on-error: true
 
+      # 4. Ejecutar tests unitarios
       - name: Run unit tests
-        run: ./mvnw test
+        run: ./mvnw test -Dtest="**/fixtures/*Test.java" -DfailIfNoTests=false
         env:
           SPRING_PROFILES_ACTIVE: test
 
+      # 5. Ejecutar tests de integración
+      - name: Run integration tests
+        run: ./mvnw test -Dtest="**/*ServiceTest.java"
+        env:
+          SPRING_PROFILES_ACTIVE: test
+
+      # 6. Build de la aplicación
       - name: Build application
         run: ./mvnw -B package -DskipTests
 
-      # Comentar temporalmente el Docker build
-      # - name: Build Docker image
-      #   run: docker build -t sportsclub-app:${{ github.sha }} .
+      # 7. Build de la imagen Docker
+      - name: Build Docker image
+        run: docker build -t sportsclub-app:${{ github.sha }} .
 
+      # 8. Ejecutar tests de aceptación
+      - name: Run acceptance tests
+        run: ./mvnw test -Dtest="**/*AcceptanceTest.java"
+        env:
+          SPRING_PROFILES_ACTIVE: test
+
+      # 9. Upload de resultados de tests
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
