@@ -1,19 +1,22 @@
 package eu.cifpfbmoll.sportsclub.service;
 
-import eu.cifpfbmoll.sportsclub.fixtures.TestFixtures;
-import eu.cifpfbmoll.sportsclub.model.Activity;
-import eu.cifpfbmoll.sportsclub.model.ActivityType;
-import eu.cifpfbmoll.sportsclub.repository.ActivityRepository;
+import java.util.List;
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
+import eu.cifpfbmoll.sportsclub.fixtures.TestFixtures;
+import eu.cifpfbmoll.sportsclub.model.Activity;
+import eu.cifpfbmoll.sportsclub.model.ActivityType;
+import eu.cifpfbmoll.sportsclub.repository.ActivityRepository;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -62,7 +65,6 @@ class ActivityServiceTest {
 
         List<Activity> trainings = activityService.findByType(ActivityType.TRAINING);
         List<Activity> competitions = activityService.findByType(ActivityType.COMPETITION);
-
         assertEquals(2, trainings.size());
         assertEquals(1, competitions.size());
     }
@@ -70,7 +72,6 @@ class ActivityServiceTest {
     @Test
     void testUpdateActivity() {
         Activity activity = activityService.save(TestFixtures.createActivity());
-
         activity.setLocation("New Location");
         Activity updated = activityService.save(activity);
 
