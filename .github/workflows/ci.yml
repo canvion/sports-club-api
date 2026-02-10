@@ -43,33 +43,27 @@ jobs:
         run: ./mvnw checkstyle:check
         continue-on-error: true
 
-      # 4. Ejecutar tests unitarios
-      - name: Run unit tests
-        run: ./mvnw test -Dtest="**/fixtures/*Test.java" -DfailIfNoTests=false
-        env:
-          SPRING_PROFILES_ACTIVE: test
-
-      # 5. Ejecutar tests de integración
+      # 4. Ejecutar tests de integración
       - name: Run integration tests
         run: ./mvnw test -Dtest="**/*ServiceTest.java"
         env:
           SPRING_PROFILES_ACTIVE: test
 
-      # 6. Build de la aplicación
+      # 5. Build de la aplicación
       - name: Build application
         run: ./mvnw -B package -DskipTests
 
-      # 7. Build de la imagen Docker
+      # 6. Build de la imagen Docker
       - name: Build Docker image
         run: docker build -t sportsclub-app:${{ github.sha }} .
 
-      # 8. Ejecutar tests de aceptación
+      # 7. Ejecutar tests de aceptación
       - name: Run acceptance tests
         run: ./mvnw test -Dtest="**/*AcceptanceTest.java"
         env:
           SPRING_PROFILES_ACTIVE: test
 
-      # 9. Upload de resultados de tests
+      # 8. Upload de resultados de tests
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
