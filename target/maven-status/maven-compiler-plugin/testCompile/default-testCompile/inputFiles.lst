@@ -1,4 +1,7 @@
 /Users/adriancerverafernandez/Projects/sports-club-api/src/test/java/eu/cifpfbmoll/sportsclub/SportsClubApplicationTests.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/test/java/eu/cifpfbmoll/sportsclub/controller/ActivityControllerAcceptanceTest.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/test/java/eu/cifpfbmoll/sportsclub/controller/AthleteControllerAcceptanceTest.java
+/Users/adriancerverafernandez/Projects/sports-club-api/src/test/java/eu/cifpfbmoll/sportsclub/controller/CoachControllerAcceptanceTest.java
 /Users/adriancerverafernandez/Projects/sports-club-api/src/test/java/eu/cifpfbmoll/sportsclub/service/ActivityServiceTest.java
 /Users/adriancerverafernandez/Projects/sports-club-api/src/test/java/eu/cifpfbmoll/sportsclub/service/AthleteServiceTest.java
 /Users/adriancerverafernandez/Projects/sports-club-api/src/test/java/eu/cifpfbmoll/sportsclub/service/CoachServiceTest.java

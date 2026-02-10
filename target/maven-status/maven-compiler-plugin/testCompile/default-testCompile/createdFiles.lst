@@ -1,4 +1,7 @@
-eu/cifpfbmoll/sportsclub/service/AthleteServiceTest.class
+eu/cifpfbmoll/sportsclub/controller/ActivityControllerAcceptanceTest.class
+eu/cifpfbmoll/sportsclub/controller/AthleteControllerAcceptanceTest.class
 eu/cifpfbmoll/sportsclub/SportsClubApplicationTests.class
-eu/cifpfbmoll/sportsclub/service/ActivityServiceTest.class
+eu/cifpfbmoll/sportsclub/controller/CoachControllerAcceptanceTest.class
 eu/cifpfbmoll/sportsclub/service/CoachServiceTest.class
+eu/cifpfbmoll/sportsclub/service/AthleteServiceTest.class
+eu/cifpfbmoll/sportsclub/service/ActivityServiceTest.class
