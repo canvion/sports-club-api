@@ -79,7 +79,7 @@ public class TestDataLoader {
             activityRepository.save(new Activity(
                     "Morning Training Session",
                     ActivityType.TRAINING,
-                    LocalDateTime.of(2026, 2, 1, 9, 0),
+                    LocalDateTime.of(2027, 2, 1, 9, 0),  // ← SOLUCION: Fecha futura
                     120,
                     "Main Stadium Track"
             ));
@@ -87,7 +87,7 @@ public class TestDataLoader {
             activityRepository.save(new Activity(
                     "Speed Training",
                     ActivityType.TRAINING,
-                    LocalDateTime.of(2026, 2, 3, 16, 0),
+                    LocalDateTime.of(2027, 2, 3, 16, 0),  // ← 2027
                     90,
                     "Training Field A"
             ));
@@ -95,7 +95,7 @@ public class TestDataLoader {
             activityRepository.save(new Activity(
                     "Regional Championship",
                     ActivityType.COMPETITION,
-                    LocalDateTime.of(2026, 2, 15, 10, 0),
+                    LocalDateTime.of(2027, 2, 15, 10, 0),  // ← 2027
                     240,
                     "City Stadium"
             ));
@@ -103,7 +103,7 @@ public class TestDataLoader {
             activityRepository.save(new Activity(
                     "Endurance Training",
                     ActivityType.TRAINING,
-                    LocalDateTime.of(2026, 2, 5, 8, 0),
+                    LocalDateTime.of(2027, 2, 5, 8, 0),  // ← 2027
                     150,
                     "Mountain Trail"
             ));
@@ -111,7 +111,7 @@ public class TestDataLoader {
             activityRepository.save(new Activity(
                     "Team Practice",
                     ActivityType.TRAINING,
-                    LocalDateTime.of(2026, 2, 7, 17, 0),
+                    LocalDateTime.of(2027, 2, 7, 17, 0),  // ← 2027
                     120,
                     "Indoor Facility"
             ));
@@ -119,7 +119,7 @@ public class TestDataLoader {
             activityRepository.save(new Activity(
                     "National Finals",
                     ActivityType.COMPETITION,
-                    LocalDateTime.of(2026, 3, 1, 11, 0),
+                    LocalDateTime.of(2027, 3, 1, 11, 0),  // ← 2027
                     300,
                     "National Arena"
             ));
@@ -127,7 +127,7 @@ public class TestDataLoader {
             activityRepository.save(new Activity(
                     "Technical Skills Workshop",
                     ActivityType.TRAINING,
-                    LocalDateTime.of(2026, 2, 10, 14, 0),
+                    LocalDateTime.of(2027, 2, 10, 14, 0),  // ← 2027
                     180,
                     "Training Center B"
             ));
@@ -135,7 +135,7 @@ public class TestDataLoader {
             activityRepository.save(new Activity(
                     "Youth Tournament",
                     ActivityType.COMPETITION,
-                    LocalDateTime.of(2026, 2, 20, 9, 0),
+                    LocalDateTime.of(2027, 2, 20, 9, 0),  // ← 2027
                     360,
                     "Sports Complex"
             ));
@@ -143,7 +143,7 @@ public class TestDataLoader {
             activityRepository.save(new Activity(
                     "Recovery Session",
                     ActivityType.TRAINING,
-                    LocalDateTime.of(2026, 2, 12, 10, 0),
+                    LocalDateTime.of(2027, 2, 12, 10, 0),  // ← 2027
                     60,
                     "Pool Area"
             ));
@@ -151,7 +151,7 @@ public class TestDataLoader {
             activityRepository.save(new Activity(
                     "Inter-Club Challenge",
                     ActivityType.COMPETITION,
-                    LocalDateTime.of(2026, 2, 25, 15, 0),
+                    LocalDateTime.of(2027, 2, 25, 15, 0),  // ← 2027
                     180,
                     "Regional Stadium"
             ));
